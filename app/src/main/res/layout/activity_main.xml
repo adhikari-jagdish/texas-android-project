@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+         />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to texas!"
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your name"
+        android:layout_marginTop="20dp"
+        android:inputType="text"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your number"
+        android:layout_marginTop="20dp"
+        android:inputType="phone"/>
+
+    <CheckBox
+        android:id="@+id/cbNewsletter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subscribe to Newsletter"
+        android:textSize="16sp"
+        android:textColor="#3ACE3F"
+        android:padding="8dp"
+        android:checked="false" />
+
+    <CheckBox
+        android:id="@+id/cbAcceptTerms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accept all terms of the app"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:padding="8dp"
+        android:checked="true" />
+
+    <RadioGroup
+        android:id="@+id/rgGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+    <RadioButton
+        android:id="@+id/rMale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Male"/>
+
+    <RadioButton
+        android:id="@+id/rbFemale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Female"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+        <CheckBox
+            android:id="@+id/cbSinging"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Singing"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:padding="8dp"
+            android:checked="true"/>
+
+        <CheckBox
+            android:id="@+id/cbFootball"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Football"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:padding="8dp"
+            android:checked="true"/>
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Submit"/>
+
+
+
+</LinearLayout>
