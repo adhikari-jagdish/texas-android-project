@@ -16,12 +16,22 @@
 
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:id="@+id/af_imageView"
+        android:src="@mipmap/nepalflag"
         app:layout_constraintTop_toBottomOf="@id/af_spinner"
         app:layout_constraintStart_toStartOf="parent"
         android:contentDescription="@string/app_name"
         />
+
+    <ListView
+        android:id="@+id/af_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/af_imageView"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

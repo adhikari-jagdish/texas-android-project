@@ -2,6 +2,7 @@ package com.texas.bcasixthtexas;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
@@ -18,6 +19,9 @@ public class FirstActivity extends AppCompatActivity {
     List<String> items = Arrays.asList("Kathmandu", "Chandragiri", "Nagarkot", "Pokhara", "Lumbini");
     Spinner afSpinner;
 
+    ListView afListView;
+    String [] bachelorCourses = {"BCA", "BBA", "CSIT", "MBA"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +29,7 @@ public class FirstActivity extends AppCompatActivity {
         setContentView(R.layout.activity_first);
 
         afSpinner = findViewById(R.id.af_spinner);
+        afListView = findViewById(R.id.af_listview);
     }
 
     @Override
@@ -34,5 +39,11 @@ public class FirstActivity extends AppCompatActivity {
         ArrayAdapter <String> adapter = new ArrayAdapter<>
                 (getApplicationContext(), android.R.layout.simple_spinner_item, items);
         afSpinner.setAdapter(adapter);
+
+        ArrayAdapter <String> listViewAdapter = new ArrayAdapter<>(
+                getApplicationContext(), android.R.layout.simple_list_item_1, bachelorCourses
+        );
+        afListView.setAdapter(listViewAdapter);
+
     }
 }
