@@ -11,6 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 public class GridViewActivity extends AppCompatActivity {
 
@@ -36,20 +37,22 @@ public class GridViewActivity extends AppCompatActivity {
         agvBtnListView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                replaceFragment(new ListViewFragment());
             }
         });
 
         agvBtnGridView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                replaceFragment(new GridViewFragment());
             }
         });
     }
 
     private void replaceFragment(Fragment currentFragment){
-
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.agv_frameLayout, currentFragment );
+        fragmentTransaction.commit();
     }
 
 }
