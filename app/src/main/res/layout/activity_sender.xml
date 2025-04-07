@@ -46,4 +46,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="40dp"
+        android:hint="Enter a value to send"
+        android:id="@+id/as_et_sending_data_for_result"
+        app:layout_constraintTop_toBottomOf="@id/as_btn_submit"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/as_btn_submit_for_result"
+        android:text="Submit button for result"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/as_et_sending_data_for_result"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

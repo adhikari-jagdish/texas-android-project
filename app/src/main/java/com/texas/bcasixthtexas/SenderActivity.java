@@ -17,11 +17,14 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class SenderActivity extends AppCompatActivity {
-    EditText etSendingData;
-    Button btnSubmit;
+    EditText etSendingData, etSendingDataForResult;
+    Button btnSubmit, btnSubmitForResult;
     Spinner asSpinnerCountries;
 
-    String [] countries = {"Nepal", "China", "USA", "Australia", "Maldives", "UK", "Canada", "India", "Bhutan"};
+    String[] countries = {"Nepal", "China", "USA", "Australia", "Maldives", "UK", "Canada", "India", "Bhutan"};
+
+    final int REQUEST_CODE = 100;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,9 @@ public class SenderActivity extends AppCompatActivity {
         etSendingData = findViewById(R.id.as_et_sending_data);
         btnSubmit = findViewById(R.id.as_btn_submit);
         asSpinnerCountries = findViewById(R.id.as_spinner_countries);
+
+        etSendingDataForResult = findViewById(R.id.as_et_sending_data_for_result);
+        btnSubmitForResult = findViewById(R.id.as_btn_submit_for_result);
     }
 
     @Override
@@ -44,7 +50,7 @@ public class SenderActivity extends AppCompatActivity {
         asSpinnerCountries.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if(adapterView.getItemAtPosition(i)!=null){
+                if (adapterView.getItemAtPosition(i) != null) {
                     String selectedValue = adapterView.getItemAtPosition(i).toString();
                     Toast.makeText(getApplicationContext(), selectedValue, Toast.LENGTH_SHORT).show();
                 }
@@ -60,9 +66,9 @@ public class SenderActivity extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(etSendingData!=null){
-                    if(etSendingData.getText()!=null){
-                        if(!etSendingData.getText().toString().isEmpty()){
+                if (etSendingData != null) {
+                    if (etSendingData.getText() != null) {
+                        if (!etSendingData.getText().toString().isEmpty()) {
                             String sendData = etSendingData.getText().toString();
 
                             Intent intent = new Intent(getApplicationContext(), ReceiverActivity.class);
@@ -73,5 +79,23 @@ public class SenderActivity extends AppCompatActivity {
                 }
             }
         });
+
+        btnSubmitForResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (etSendingDataForResult != null) {
+                    if (etSendingDataForResult.getText() != null) {
+                        if (!etSendingDataForResult.getText().toString().isEmpty()) {
+                            String sendDataForResult = etSendingDataForResult.getText().toString();
+
+                            Intent intent = new Intent(getApplicationContext(), ReceiverActivity.class);
+                            intent.putExtra("name", sendDataForResult);
+                            startActivityForResult(intent, REQUEST_CODE);
+                        }
+                    }
+                }
+            }
+        });
+
     }
 }
