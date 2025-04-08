@@ -30,11 +30,23 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"/>
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/asl_et_course_duration"
+        app:layout_constraintTop_toBottomOf="@id/asl_et_course_name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:hint="Enter your course duration"
+        android:padding="10dp"
+        android:inputType="number"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit"
-        app:layout_constraintTop_toBottomOf="@id/asl_et_course_name"
+        app:layout_constraintTop_toBottomOf="@id/asl_et_course_duration"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp"
