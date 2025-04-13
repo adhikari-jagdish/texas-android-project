@@ -14,7 +14,6 @@ import androidx.fragment.app.Fragment;
 
 public class AlertDialogFragment extends DialogFragment {
 
-
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {

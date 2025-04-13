@@ -74,7 +74,7 @@ public class SenderActivity extends AppCompatActivity {
 
                             Intent intent = new Intent(getApplicationContext(), ReceiverActivity.class);
                             intent.putExtra("sending_data", sendData);
-                            startActivity(intent);
+                            startActivityForResult(intent, REQUEST_CODE);
                         }
                     }
                 }
