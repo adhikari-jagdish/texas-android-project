@@ -2,6 +2,7 @@ package com.texas.bcasixthtexas.helpers;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -55,6 +56,18 @@ public class SqliteDbHelper extends SQLiteOpenHelper {
         db.insert(TABLE_NAME, null, values);
 
         db.close();
+    }
+
+    //This method is to read data from database
+    public Cursor getAllCourses() {
+        SQLiteDatabase db = getReadableDatabase();
+        return db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+    }
+
+    // Delete Course by ID
+    public int deleteCourse(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_NAME, ID_COL + "=?", new String[]{String.valueOf(id)});
     }
 
     @Override
