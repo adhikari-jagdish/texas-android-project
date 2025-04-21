@@ -38,11 +38,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+        String title = itemList.get(position).getTitle();
+        String description = itemList.get(position).getDescription();
+
+        final ViewHolder viewHolder = (ViewHolder) holder;
+
+        viewHolder.rilTvTitle.setText(title);
+        viewHolder.rilTvDescription.setText(description);
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return itemList.size();
     }
 }
