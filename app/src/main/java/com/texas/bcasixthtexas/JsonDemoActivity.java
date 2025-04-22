@@ -30,7 +30,5 @@ public class JsonDemoActivity extends AppCompatActivity {
        String studentJson = gson.toJson(studentModel);
 
         Log.i("JSON DEMO", studentJson);
-
-
     }
 }
