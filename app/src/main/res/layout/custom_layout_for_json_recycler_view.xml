@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="15dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/app_name"
+            android:id="@+id/courseImg"
+            android:src="@mipmap/nepalflag"/>
+
+        <TextView
+            android:id="@+id/courseName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/courseImg"
+            android:paddingTop="10dp"
+            android:paddingStart="10dp"
+            app:layout_constraintStart_toEndOf="@id/courseImg"
+            android:text="CourseName"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/courseMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/courseName"
+            app:layout_constraintStart_toEndOf="@id/courseImg"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:text="CourseMode"/>
+
+        <TextView
+            android:id="@+id/courseTracks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/courseMode"
+            app:layout_constraintStart_toEndOf="@id/courseImg"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:text="CourseTracks"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>
