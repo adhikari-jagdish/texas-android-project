@@ -44,6 +44,7 @@ dependencies {
     implementation(libs.volley)
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
+    implementation (libs.picasso)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
